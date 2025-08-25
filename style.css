@@ -286,3 +286,144 @@ nav a:hover::after, nav li:hover::after {
     width: 100%;
     left: 0;
 }
+
+/* Estilos para el formulario de registro/login */
+
+#boxregistrarse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+#boxlogin {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#boxlogin label {
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+#boxlogin input[type="text"],
+#boxlogin input[type="password"] {
+    padding: 12px 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#boxlogin input[type="text"]:focus,
+#boxlogin input[type="password"]:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+#boxlogin input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    accent-color: #667eea;
+    cursor: pointer;
+}
+
+/* Contenedor para checkbox y label */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#btniniciar,
+#btnregistrarse {
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#btniniciar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    margin-bottom: 10px;
+}
+
+#btniniciar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+#btnregistrarse {
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+#btnregistrarse:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+}
+
+#confirmar, #inpconfirmar{
+    display: none;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    #boxregistrarse {
+        padding: 10px;
+    }
+    
+    #boxlogin {
+        padding: 30px 20px;
+        max-width: 100%;
+    }
+    
+    #btniniciar,
+    #btnregistrarse {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Animación de entrada */
+#boxlogin {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
