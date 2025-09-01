@@ -14,7 +14,9 @@ const botoningresar = document.getElementById("btniniciar")
 botoningresar.addEventListener("click", ingresar )
 function ingresar() {
     alert("Está por ingresar")
+    window.location.href = "paneldecontrol.html"
 }
+
 const botonregistrar = document.getElementById("btnregistrarse")
 botonregistrar.addEventListener("click", verregistrar )
 function verregistrar() {
